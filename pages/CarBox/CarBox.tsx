@@ -1,10 +1,11 @@
 import React from 'react';
-import { Div, Title, Year, Img, Detail } from './CarBoxStyle';
+import { useRouter } from 'next/router';
+import { CarDetail } from '../../components/CarDetail/CarDetail';
 import Link from 'next/link';
 import Modal from 'react-modal';
-import { useRouter } from 'next/router';
-import { CarDetail } from '../CarDetail/CarDetail';
+import { Div, Title, Year, Img, Detail } from './CarBoxStyle';
 
+// Declare the props from the data
 interface CarProps {
     imgUrl?: string,
     title: string,
@@ -26,7 +27,7 @@ export const CarBox: React.FC<CarProps> = ({ imgUrl, title, year, color, kilomet
             <Year>{year}</Year>
             <Img src={imgUrl} alt="img" />
             <Link 
-                href={`/?CarDetail=${title}`}
+                href={`/?title=${title}`}
                 as={`/car/${title}`}
             >
                 <Detail>

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import Layout from '../Layout/Layout';
-import { CarDetail } from '../CarDetail/CarDetail';
+import Layout from '../../components/Layout/Layout';
+import { CarDetail } from '../../components/CarDetail/CarDetail';
 
 export default function CarPage() {
     const router = useRouter();

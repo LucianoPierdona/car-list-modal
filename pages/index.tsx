@@ -1,5 +1,5 @@
 import Layout from '../components/Layout/Layout'
-import { CarBox } from '../components/CarBox/CarBox'
+import { CarBox } from './CarBox/CarBox'
 import { data } from '../src/data'
 
 export default function Home() {
