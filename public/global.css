@@ -1,0 +1,18 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, sans-serif;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    color: #F62222;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    transition: color .2s;
+}
+a:hover {
+    color: #444;
+}
