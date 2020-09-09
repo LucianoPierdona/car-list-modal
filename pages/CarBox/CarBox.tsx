@@ -16,11 +16,14 @@ interface CarProps {
     fuel?: string
 }
 
+
+// set the modal to show on #__next
 Modal.setAppElement("#__next");
 
+// Create the CarBox receiving the props from the data
 export const CarBox: React.FC<CarProps> = ({ imgUrl, title, year, color, kilometers, gear, fuel }) => {
     const router = useRouter();
-    
+
     return (
         <Div>
             <Title>{title}</Title>
@@ -34,7 +37,10 @@ export const CarBox: React.FC<CarProps> = ({ imgUrl, title, year, color, kilomet
                     Detail
                 </Detail>
             </Link>
-            <Modal isOpen={!!router.query.title} onRequestClose={() => router.push('/')}>
+            {/* Check if the modal is opened or closed */}
+            <Modal isOpen={!!router.query.title} onRequestClose={() => {
+                router.push('/');
+            }}>
                 <CarDetail
                     title={title}
                     year={year}

@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div>
       <Layout>
+        {/* Map into the data in data.ts */}
         {data.cars.map((car) => {
           const { color, kilometers, gear, fuel } = car.details;
 

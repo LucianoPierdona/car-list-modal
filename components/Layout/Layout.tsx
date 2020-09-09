@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { CardStyle, SubTitle, Nav } from './LayoutStyle';
 
+// Layout of the page
 export default function Layout({ children }) {
     return (
         <>
